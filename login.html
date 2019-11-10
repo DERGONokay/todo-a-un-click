@@ -64,40 +64,11 @@
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   
+  <!-- Sweet alert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
+  <!-- Custom JS -->
+  <script src="js/custom/session.js"></script>
+
 </body>
-
-<script>
-  function login() {
-    inputEmail = document.getElementById("inputEmail").value;
-    inputPassword = document.getElementById("inputPassword").value;
-
-    currentUser = {
-      email: inputEmail,
-      password: inputPassword
-    }
-
-    users = JSON.parse(localStorage.getItem("users"));
-    /*[{"email": "damian.lisas@gmail.com", "password": "password123"}, {"email": "admin@gmail.com", "password": "admin123"}]*/
-
-    if(users) {
-      users.forEach(element => {
-        debugger;
-        if(element.email == currentUser.email) {
-          if(element.password == currentUser.password) {
-            sessionStorage.setItem("session", "activa");
-            document.getElementById("login").click();
-          }
-        }
-      });
-      Swal.fire({
-        icon: "error",
-        title: "Ups...",
-        text: "Contraseña y/o usuario incorrectos"
-      });
-    }
-  }
-</script>
-
 </html>

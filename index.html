@@ -742,7 +742,8 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a id="logout" class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" onclick="logout()">Logout</a>
+          <a id="logout" class="btn btn-primary" href="login.html" hidden>Logout</a>
         </div>
       </div>
     </div>
@@ -767,26 +768,11 @@
   <script src="js/demo/datatables-demo.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>
 
+  <!-- Sweet alert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
-  <script>
-    function validSession() {
-      debugger;
-      session = sessionStorage.getItem("session");
-      return session == "activa";
-    }
-
-    function validateSession() {
-      if(!validSession()) {
-        document.getElementById("logout").click();
-      } else {
-        Swal.fire({
-          icon: "success",
-          title: "¡Bienvenido!"
-        });
-      }
-    }
-  </script>
+  <!-- Custom JS -->
+  <script src="js/custom/session.js"></script>
 
 </body>
 

@@ -98,6 +98,7 @@ function logout() {
 }
 
 function login() {
+    login = false;
     let inputEmail = document.getElementById("inputEmail").value;
     let inputPassword = document.getElementById("inputPassword").value;
 
@@ -113,19 +114,22 @@ function login() {
       users.forEach(element => {
         debugger;
         if(element.email == currentUser.email) {
-          if(element.password == currentUser.password) {
-            sessionStorage.setItem("session", "activa");
-            document.getElementById("login").click();
-          }
+            if(element.password == currentUser.password) {
+                login = true;
+                sessionStorage.setItem("session", "activa");
+                document.getElementById("login").click();
+            }
         }
       });
     }
     
-    Swal.fire({
-        icon: "error",
-        title: "Ups...",
-        text: "Contraseña y/o usuario incorrectos"
-    });
+    if(!login) {
+        Swal.fire({
+            icon: "error",
+            title: "Ups...",
+            text: "Contraseña y/o usuario incorrectos"
+        });
+    }
 }
 
 function getUsers() {

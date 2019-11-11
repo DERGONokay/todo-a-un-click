@@ -2,7 +2,12 @@ function register() {
     register = true;
     inputUser = getUserInputs();
 
-    if(inputUser.firstName == "" || inputUser.lastName == "" || inputUser.email == "" || inputUser.password == "") {
+    if(inputUser.firstName == "" || inputUser.lastName == "" || inputUser.email == "" || inputUser.password == "" || inputUser.address == "" || 
+    inputUser.age == "" || inputUser.dni == "" || creditCard.number == "" || creditCard.ccv == "" || creditCard.expiration == "") {
+        register = false;
+    }
+
+    if(inputUser.age < 21) {
         register = false;
     }
 
@@ -44,8 +49,12 @@ function saveUser(userInputs) {
     let newUser = {
         firstName: userInputs.firstName,
         lastName: userInputs.lastName,
+        address: userInputs.address,
+        age: userInputs.age,
+        dni: userInputs.dni,
         email: userInputs.email,
-        password: userInputs.password
+        password: userInputs.password,
+        creditCard: userInputs.creditCard
     };
 
     let users = getUsers();
@@ -76,9 +85,17 @@ function getUserInputs() {
     return {
         firstName: document.getElementById("firstName").value,
         lastName: document.getElementById("lastName").value,
+        address: document.getElementById("address").value,
+        age: document.getElementById("age"),
+        dni: document.getElementById("dni"),
         email: document.getElementById("inputEmail").value,
         password: document.getElementById("inputPassword").value,
-        confirmPassword: document.getElementById("confirmPassword").value
+        confirmPassword: document.getElementById("confirmPassword").value,
+        creditCard: {
+            number: document.getElementById("number"),
+            ccv: document.getElementById("ccv"),
+            expiration: document.getElementById("expiration")
+        }
     }
 }
 

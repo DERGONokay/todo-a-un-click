@@ -1,7 +1,7 @@
 {
   "id": "0b6702c5-bd5e-4a17-bf48-0a43fc175228",
   "version": "2.0",
-  "name": "learning",
+  "name": "Todo a un click",
   "url": "https://todoaunclickungs.firebaseapp.com",
   "tests": [{
     "id": "f35a5483-189f-4b97-a8a0-48251074ee7f",

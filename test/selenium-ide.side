@@ -209,13 +209,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "af4f3af1-dc80-40f8-b73e-07b2da46d02a",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "685x693",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "ba0338d1-48f1-45d1-8d8e-00814a7fcba7",
       "comment": "",
       "command": "type",
@@ -251,17 +244,6 @@
         ["xpath=//a[@onclick='login()']", "xpath:attributes"],
         ["xpath=//a", "xpath:position"],
         ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "8e3034f7-b596-4720-a685-40051d6fd6b2",
-      "comment": "",
-      "command": "click",
-      "target": "css=.swal2-header",
-      "targets": [
-        ["css=.swal2-header", "css:finder"],
-        ["xpath=//body[@id='page-top']/div[3]/div/div", "xpath:idRelative"],
-        ["xpath=//body/div[3]/div/div", "xpath:position"]
       ],
       "value": ""
     }, {
@@ -1389,6 +1371,424 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "e1b90958-b7fa-4f36-8caf-8b899fd55ce8",
+    "name": "LTC1",
+    "commands": [{
+      "id": "c5bdd9db-d9c3-431a-9817-f7e1ef9a8967",
+      "comment": "",
+      "command": "open",
+      "target": "/login.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b00541f-6f6f-43a4-9685-203675c0e059",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.localStorage.clear()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e55e077-bb6a-4882-a949-0abdb3c4735e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.localStorage.setItem('users', '[{\"firstName\":\"Juan\",\"lastName\":\"Perez\",\"address\":\"Calle falsa 123\",\"age\":\"33\",\"dni\":\"40060441\",\"email\":\"juan.perez@gmail.com\",\"password\":\"pasword123\",\"creditCard\":{\"number\":\"10203040506070809010\",\"ccv\":\"123\",\"expiration\":\"2021-02-01\"}}]')",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d60344a-b1d5-41a0-856c-e840ae019128",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [
+        ["id=inputEmail", "id"],
+        ["css=#inputEmail", "css:finder"],
+        ["xpath=//input[@id='inputEmail']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "juan.perez@gmail.com"
+    }, {
+      "id": "4ee108b4-72f1-45a0-a8f2-21ccd0586db3",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputPassword",
+      "targets": [
+        ["id=inputPassword", "id"],
+        ["css=#inputPassword", "css:finder"],
+        ["xpath=//input[@id='inputPassword']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "pasword123"
+    }, {
+      "id": "b9523d0d-c021-46c9-82ed-7e0018625246",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@onclick='login()']", "xpath:attributes"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bf2f2ee-8677-44e2-af4c-7114f59c121e",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-title",
+      "targets": [
+        ["id=swal2-title", "id"],
+        ["css=#swal2-title", "css:finder"],
+        ["xpath=//h2[@id='swal2-title']", "xpath:attributes"],
+        ["xpath=//body[@id='page-top']/div[3]/div/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'¡Bienvenido!')]", "xpath:innerText"]
+      ],
+      "value": "¡Bienvenido!"
+    }, {
+      "id": "81db8ec3-ba73-445f-a460-a2da76c61248",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//body[@id='page-top']/div[3]/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd6f0390-8c79-4fe9-894b-59ece5558900",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "SB Admin - Dashboard",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2270e873-e351-41b0-b45a-33a931dd285a",
+    "name": "LTC2",
+    "commands": [{
+      "id": "eabb89fa-e2a4-4f32-90ac-7affa258645b",
+      "comment": "",
+      "command": "open",
+      "target": "/login.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e42ec355-0835-4c19-aa58-c48c4cfbf3b7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.localStorage.clear()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c1ee497-a5bf-4347-b01a-8339d7a58df6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.localStorage.setItem('users', '[{\"firstName\":\"Juan\",\"lastName\":\"Perez\",\"address\":\"Calle falsa 123\",\"age\":\"33\",\"dni\":\"40060441\",\"email\":\"juan.perez@gmail.com\",\"password\":\"pasword123\",\"creditCard\":{\"number\":\"10203040506070809010\",\"ccv\":\"123\",\"expiration\":\"2021-02-01\"}}]')",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87ffd0b9-9983-4978-b4ce-93893bcd3a3f",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [
+        ["id=inputEmail", "id"],
+        ["css=#inputEmail", "css:finder"],
+        ["xpath=//input[@id='inputEmail']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "juan.perez@gmail.com"
+    }, {
+      "id": "41ef625d-7343-441f-b10d-a89f681bb112",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputPassword",
+      "targets": [
+        ["id=inputPassword", "id"],
+        ["css=#inputPassword", "css:finder"],
+        ["xpath=//input[@id='inputPassword']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "pass"
+    }, {
+      "id": "5608997f-4cfa-4c00-8c9b-68fb587a7b91",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@onclick='login()']", "xpath:attributes"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "443ffe3a-ecd6-4a15-9a05-805baa77b986",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-title",
+      "targets": [
+        ["id=swal2-title", "id"],
+        ["css=#swal2-title", "css:finder"],
+        ["xpath=//h2[@id='swal2-title']", "xpath:attributes"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Ups...')]", "xpath:innerText"]
+      ],
+      "value": "Ups..."
+    }, {
+      "id": "428df977-ba69-48b0-9c7f-4f7958f8dcdd",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-content",
+      "targets": [
+        ["id=swal2-content", "id"],
+        ["css=#swal2-content", "css:finder"],
+        ["xpath=//div[@id='swal2-content']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Contraseña y/o usuario incorrectos"
+    }, {
+      "id": "c2d7beb0-12c6-42ef-9141-b4c2feaa8b06",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a69cb3b9-44fc-40e2-99d6-55f417080000",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "SB Admin - Login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2338bda6-6a67-4e40-ad26-89b0ccd745ed",
+    "name": "LTC3",
+    "commands": [{
+      "id": "ef114b91-270e-49dc-b99b-cc965867ccbc",
+      "comment": "",
+      "command": "open",
+      "target": "/login.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e127efb6-1a45-4e99-84d4-eda409f26e92",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.localStorage.clear()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed591c6e-9f5c-4f63-a30f-6d641c460ba6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.localStorage.setItem('users', '[{\"firstName\":\"Juan\",\"lastName\":\"Perez\",\"address\":\"Calle falsa 123\",\"age\":\"33\",\"dni\":\"40060441\",\"email\":\"juan.perez@gmail.com\",\"password\":\"pasword123\",\"creditCard\":{\"number\":\"10203040506070809010\",\"ccv\":\"123\",\"expiration\":\"2021-02-01\"}}]')",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64fb3f0c-1deb-4081-8368-7e39d45ee23f",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [
+        ["id=inputEmail", "id"],
+        ["css=#inputEmail", "css:finder"],
+        ["xpath=//input[@id='inputEmail']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "juan@perez@gmail.com"
+    }, {
+      "id": "aa5905c6-abcc-40e9-b767-33cf67cdd4ed",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputPassword",
+      "targets": [
+        ["id=inputPassword", "id"],
+        ["css=#inputPassword", "css:finder"],
+        ["xpath=//input[@id='inputPassword']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "password123"
+    }, {
+      "id": "c267fd29-9a62-44ef-8d3a-34936999d505",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@onclick='login()']", "xpath:attributes"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "401533b0-db9b-40d3-bc44-79d59c218a82",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-title",
+      "targets": [
+        ["id=swal2-title", "id"],
+        ["css=#swal2-title", "css:finder"],
+        ["xpath=//h2[@id='swal2-title']", "xpath:attributes"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Ups...')]", "xpath:innerText"]
+      ],
+      "value": "Ups..."
+    }, {
+      "id": "982d997b-9990-4094-b99c-11d984e2058c",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-content",
+      "targets": [
+        ["id=swal2-content", "id"],
+        ["css=#swal2-content", "css:finder"],
+        ["xpath=//div[@id='swal2-content']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Contraseña y/o usuario incorrectos"
+    }, {
+      "id": "3f258685-9799-4376-b00d-f4bda2debf6c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f89373d-7f80-433c-b886-ad9a48b23df1",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "SB Admin - Login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7dbea555-febd-4341-9088-fb16abb87a6a",
+    "name": "LTC4",
+    "commands": [{
+      "id": "abbc44e5-7815-49c2-b423-cefb78b4790f",
+      "comment": "",
+      "command": "open",
+      "target": "/login.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71185196-5c03-4c3e-8b60-4c2824aff239",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.localStorage.clear()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52eaafad-ca16-4286-8041-b1bc0260fbbf",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.localStorage.setItem('users', '[{\"firstName\":\"Juan\",\"lastName\":\"Perez\",\"address\":\"Calle falsa 123\",\"age\":\"33\",\"dni\":\"40060441\",\"email\":\"juan.perez@gmail.com\",\"password\":\"pasword123\",\"creditCard\":{\"number\":\"10203040506070809010\",\"ccv\":\"123\",\"expiration\":\"2021-02-01\"}}]')",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d922bf37-0b1d-4276-9f07-9669725188ed",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [
+        ["id=inputEmail", "id"],
+        ["css=#inputEmail", "css:finder"],
+        ["xpath=//input[@id='inputEmail']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "juan@perez@gmail.com"
+    }, {
+      "id": "de8f168d-a995-4034-8bc9-99116c8d6113",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputPassword",
+      "targets": [
+        ["id=inputPassword", "id"],
+        ["css=#inputPassword", "css:finder"],
+        ["xpath=//input[@id='inputPassword']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "pass"
+    }, {
+      "id": "833701ee-dd98-445b-ac74-28d32e38c3b7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@onclick='login()']", "xpath:attributes"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "32663aaf-b834-4d6b-928c-36b1db7074fa",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-title",
+      "targets": [
+        ["id=swal2-title", "id"],
+        ["css=#swal2-title", "css:finder"],
+        ["xpath=//h2[@id='swal2-title']", "xpath:attributes"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Ups...')]", "xpath:innerText"]
+      ],
+      "value": "Ups..."
+    }, {
+      "id": "d55b656b-5629-4b88-a1d6-5742b4dcdbae",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=swal2-content",
+      "targets": [
+        ["id=swal2-content", "id"],
+        ["css=#swal2-content", "css:finder"],
+        ["xpath=//div[@id='swal2-content']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Contraseña y/o usuario incorrectos"
+    }, {
+      "id": "60c342d6-fb4c-4525-8b58-f84511ebef24",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-confirm",
+      "targets": [
+        ["css=.swal2-confirm", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2e12c9a-fb0b-4719-9022-236e943c57a1",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "SB Admin - Login",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "a11f615d-c671-4101-a13f-2f3ca2016b1f",
@@ -1404,6 +1804,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["fe1b3828-e0df-4ac4-b090-bd0ab93bea8f", "11302939-0848-4312-8bb5-ed1312c083e3", "0f0d1f59-676b-4d1b-94b2-feb3a75afc7c", "14b2181c-1b32-4360-b4e1-b05bc7fa726c", "4741ea87-c51c-4cc4-8732-9a4c22bb64da"]
+  }, {
+    "id": "3414d9f3-de66-4756-b5c4-866f14ff80ea",
+    "name": "Login",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e1b90958-b7fa-4f36-8caf-8b899fd55ce8", "2270e873-e351-41b0-b45a-33a931dd285a", "2338bda6-6a67-4e40-ad26-89b0ccd745ed", "7dbea555-febd-4341-9088-fb16abb87a6a"]
   }],
   "urls": ["https://todoaunclickungs.firebaseapp.com/"],
   "plugins": []

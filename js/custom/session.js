@@ -1,30 +1,30 @@
 function register() {
-    register = true;
-    inputUser = getUserInputs();
+    let register = true;
+    let userInputs = getUserInputs();
 
-    if(inputUser.firstName == "" || inputUser.lastName == "" || inputUser.email == "" || inputUser.password == "" || inputUser.address == "" || 
-    inputUser.age == "" || inputUser.dni == "" || creditCard.number == "" || creditCard.ccv == "" || creditCard.expiration == "") {
+    if(userInputs.firstName == "" || userInputs.lastName == "" || userInputs.email == "" || userInputs.password == "" || userInputs.address == "" || 
+    userInputs.age == "" || userInputs.dni == "" || userInputs.creditCard.number == "" || userInputs.creditCard.ccv == "" || userInputs.creditCard.expiration == "") {
         register = false;
     }
 
-    if(inputUser.age < 21) {
+    if(userInputs.age < 21) {
         register = false;
     }
 
-    if(!isValidEmail(inputUser.email)) {
+    if(!isValidEmail(userInputs.email)) {
         register = false;
     }
 
-    if(inputUser.password != inputUser.confirmPassword) {
+    if(userInputs.password != userInputs.confirmPassword) {
         register = false;
     }
 
-    if(!isValidPassword(inputUser.password)) {
+    if(!isValidPassword(userInputs.password)) {
         register = false;
     }
 
     if(register) {
-        let error = saveUser(inputUser);
+        let error = saveUser(userInputs);
         if(error) {
             Swal.fire({
                 icon: "error",
@@ -86,15 +86,15 @@ function getUserInputs() {
         firstName: document.getElementById("firstName").value,
         lastName: document.getElementById("lastName").value,
         address: document.getElementById("address").value,
-        age: document.getElementById("age"),
-        dni: document.getElementById("dni"),
+        age: document.getElementById("age").value,
+        dni: document.getElementById("dni").value,
         email: document.getElementById("inputEmail").value,
         password: document.getElementById("inputPassword").value,
         confirmPassword: document.getElementById("confirmPassword").value,
         creditCard: {
-            number: document.getElementById("number"),
-            ccv: document.getElementById("ccv"),
-            expiration: document.getElementById("expiration")
+            number: document.getElementById("cardNumber").value,
+            ccv: document.getElementById("ccv").value,
+            expiration: document.getElementById("expiration").value
         }
     }
 }
